@@ -1,0 +1,43 @@
+body {
+  background-color: #87ceeb;
+  padding-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+header {
+  text-align: right;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #000;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+section h2 {
+  color: #0cc;
+}
+
+h2 {
+  font-size: 2.2em;
+}

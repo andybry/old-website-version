@@ -1,5 +1,18 @@
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+
 body {
-  background-color: #87ceeb;
+  background: #87ceeb url('../gfx/blue_swirl.jpg');
   padding-top: 20px;
   padding-left: 10%;
   padding-right: 10%;
@@ -9,11 +22,15 @@ body {
 
 header {
   text-align: right;
-  font-size: 1em;
 }
 
 h1 {
   font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: -20px;
 }
 
 header ul {
@@ -30,14 +47,47 @@ section {
   margin-top: 30px;
   margin-bottom: 30px;
   color: #000;
+  padding-top: 1px;
   padding-left: 1%;
   padding-right: 1%;
+  padding-bottom: 1px;
+  box-shadow: 5px 5px #0cc;
+}
+
+section li {
+  list-style-type: square;
+  list-style-position: inside;
+  color: #088;
+}
+
+section li span {
+  color: #000;
+  margin-left: 1%;
 }
 
 section h2 {
   color: #0cc;
 }
 
-h2 {
-  font-size: 2.2em;
+section h2, section p, section ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section dl {
+  margin-bottom: 20px;
+  width: 98%;
+}
+
+section dt, section dd {
+  float: left;
+}
+
+section dd {
+  width: 50%;
+}
+
+section dt {
+  width: 50%;
+  clear: left;
 }

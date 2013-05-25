@@ -42,12 +42,16 @@ header ul {
 }
 
 header ul a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
+header ul a:hover {
+  text-decoration: underline;
+}
+
 section {
-  background-color: white;
+  background-color: #fff;
   margin-top: 30px;
   margin-bottom: 30px;
   color: #000;
@@ -98,4 +102,13 @@ section dd {
 section dt {
   width: 50%;
   clear: left;
+}
+
+section a {
+  color: #909090;
+  text-decoration: none;
+}
+
+section a:hover {
+  text-decoration: underline;
 }

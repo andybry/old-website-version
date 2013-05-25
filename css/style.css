@@ -33,6 +33,10 @@ h2 {
   margin-bottom: -20px;
 }
 
+h3 {
+  font-size: 1.2em;
+}
+
 header ul {
   list-style: none;
 }
@@ -65,8 +69,12 @@ section li span {
   margin-left: 1%;
 }
 
-section h2 {
+section h2, section h3 {
   color: #0cc;
+}
+
+section h3 {
+  margin-top: -20px;
 }
 
 section h2, section p, section ul {

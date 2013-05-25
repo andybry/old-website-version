@@ -1,0 +1,4 @@
+s3cmd sync . s3://www.arbryant101.com/ -P --exclude='*' --include='index.htm'
+s3cmd sync css s3://www.arbryant101.com/ -P --exclude='*' --include='*.css'
+s3cmd sync gfx s3://www.arbryant101.com/ -P --exclude='*' --include='*.jpg'
+s3cmd sync js s3://www.arbryant101.com/ -P --exclude='*' --include='*.js'

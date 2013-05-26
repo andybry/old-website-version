@@ -1,0 +1,1 @@
+java -jar jars/yuicompressor-2.4.7.jar style.css -o style.css

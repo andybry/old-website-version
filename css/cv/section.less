@@ -1,0 +1,73 @@
+section {
+  background-color: @innerBackgroundColour;
+  color: @innerTextColour;
+  box-shadow: 5px 5px @boxShadowColour;
+
+  margin: 30px 0px 30px 0px;
+  padding: 1px 5% 1px 5%;
+
+  // headers
+  h2, h3 {
+    color: @innerHeaderColour;
+  }
+
+  h2 a {
+    color: @innerHeaderLinkColour;
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    text-decoration: underline;
+  }
+
+  h3 {
+    margin-top: -20px;
+  }
+
+  h2, p, ul {
+    margin: 20px 0px 20px 0px;
+  }
+
+  // links
+  a {
+    color: @innerLinkColour;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  // lists
+  li {
+    color: @listSquareColour;
+
+    list-style-type: square;
+    list-style-position: inside;
+
+    span {
+      color: @innerTextColour;
+      margin-left: 1%;
+    }
+  }
+
+  // definitions
+  dl {
+    margin-bottom: 20px;
+    width: 98%;
+  }
+  
+  dt, dd {
+    float: left;
+  }
+  
+  dd {
+    width: 50%;
+  }
+  
+  dt {
+    width: 50%;
+    clear: left;
+  }
+
+}

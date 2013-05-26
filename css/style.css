@@ -77,6 +77,10 @@ section h2, section h3 {
   color: #0cc;
 }
 
+section h2 a {
+  color: #009c9c;
+}
+
 section h3 {
   margin-top: -20px;
 }

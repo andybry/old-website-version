@@ -1,0 +1,1 @@
+bin/rhino scripts/compileCss.js > css/style.css

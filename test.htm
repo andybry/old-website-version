@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>ARB</title>
+    <link rel="stylesheet" href="css/reset.less" />
+    <style>
+      .frames {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      .frame {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .animate {
+        transition: left 1s;
+        -webkit-transition: left 1s;
+      }
+
+      .left {
+        left: -100%;
+      }
+
+      .center {
+        left: 0;
+      }
+
+      .right {
+        left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frames">
+      <div class="frame left frame1"><h1>frame1</h1></div>
+      <div class="frame center frame2"><h1>frame2</h1></div>
+      <div class="frame right frame3"><h1>frame3</h1></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      function moveLeft() {
+        var $frame = $(".frame");
+        var $left = $(".left");
+        var $center = $(".center");
+        var $right = $(".right");
+        // set center and right to animate as they will be seen to move by the user
+        $frame.removeClass("animate");
+        $center.addClass("animate");
+        $right.addClass("animate");
+        // move center to left, left to right and right to center
+        $center.removeClass("center").addClass("left");
+        $left.removeClass("left").addClass("right");
+        $right.removeClass("right").addClass("center");
+      }
+
+      function moveRight() {
+        var $frame = $(".frame");
+        var $left = $(".left");
+        var $center = $(".center");
+        var $right = $(".right");
+        // set center and left to animate as they will be seen to move by the user
+        $frame.removeClass("animate");
+        $center.addClass("animate");
+        $left.addClass("animate");
+        // move center to right, right to left and left to center
+        $center.removeClass("center").addClass("right");
+        $right.removeClass("right").addClass("left");
+        $left.removeClass("left").addClass("center");
+      }
+
+
+    </script>
+  </body>
+</html>

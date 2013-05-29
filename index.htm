@@ -60,6 +60,91 @@
       .right {
         left: 100%;
       }
+
+      /* TODO: factor into stylesheets */
+      @font-face {
+      	font-family: 'iconic';
+      	src:url('fonts/iconic.eot');
+      	src:url('fonts/iconic.eot?#iefix') format('embedded-opentype'),
+      		url('fonts/iconic.woff') format('woff'),
+      		url('fonts/iconic.ttf') format('truetype'),
+      		url('fonts/iconic.svg#iconic') format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+           
+      .icon-arrow-right, .icon-arrow-left {
+      	font-family: 'iconic';
+      	speak: none;
+      	font-style: normal;
+      	font-weight: normal;
+      	font-variant: normal;
+      	text-transform: none;
+      	line-height: 1;
+      	-webkit-font-smoothing: antialiased;
+      }
+      .icon-arrow-right:before {
+      	content: "\e000";
+      }
+      .icon-arrow-left:before {
+      	content: "\e001";
+      }
+
+      /* TODO: factor into CV stylesheets */
+      .demo-link {
+        color: #fff;
+        background-color: #000;
+        position: fixed;
+        font-size: 1em;
+        right: 0px;
+        top: 40%;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: none;
+      }
+
+      .js .cv.center .demo-link {
+        display: block;
+      }
+
+      .demo-link:hover {
+        color: #909090;
+      }
+
+      /* TODO: factor into CV stylesheets */
+      .cv-link {
+        color: #fff;
+        background-color: #000;
+        position: fixed;
+        font-size: 1em;
+        left: 0px;
+        top: 40%;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: none;
+      }
+
+      .js .demos.center .cv-link {
+        display: block;
+      }
+
+      .cv-link:hover {
+        color: #909090;
+      }
+
+      /*TODO: factor into demos stylesheets */
+      .demos {
+        background-color: #ff9;
+        padding-top: 20%;
+      }
+      .demos h1 {
+        font-size: 2.2em;
+        text-align: center;
+        height: 80%;
+      }
+
     </style>
   </head>
   <body>
@@ -183,12 +268,23 @@
         <section>
           <em>References available on request.</em>
         </section>
+
+        <div class="demo-link">
+          Demos <span class="icon-arrow-right"></span>
+        </div>
       </div>
-      <div class="frame right frame3"><h1>frame3</h1></div>
+      <div class="frame right demos">
+        <h1>Demos Coming Soon</h1>
+        <div class="cv-link">
+          <span class="icon-arrow-left"></span> cv
+        </div>
+      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="lib/jquery-1.9.1.min.js"><\/script>')</script>
+    <!-- support for icon fonts int IE 7 and less -->
+    <!--[if lte IE 7]><script src="lib/icomoon-lte-ie7.js"></script><![endif]-->
     <script>
       /* TODO: factor into MVC */
       function moveLeft() {
@@ -221,6 +317,15 @@
         $left.removeClass("left").addClass("center");
       }
 
+      $(".demo-link").bind("touchstart click", function() {
+        moveLeft();
+        ga('send', 'pageview', '/demos');
+      });
+
+      $(".cv-link").bind("touchstart click", function() {
+        moveRight();
+        ga('send', 'pageview', '/');
+      });
     </script>
 
   </body>
